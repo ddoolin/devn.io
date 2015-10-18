@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Devin Doolin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/app.css -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="devnApp" class="layout-row">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Site sidenav -->
+    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left md-whiteframe-z1 site-sidenav">
+      <header class="sidenav-header">
+        <a href="#/" class="profile-picture">
+          <img src="/images/profile.jpg">
+          <h1 class="md-heading">devn.io</h1>
+        </a>
+      </header>
+      <md-content>
+        <nav class="sidenav-nav" ng-controller="SidenavCtrl">
+          <ul class="sidenav-nav-items">
+            <li>
+              <md-button ng-class="{ 'active': isActive('/') }" href="#/">
+                <span>About</span>
+                <span class="md-ripple-container"></span>
+              </md-button>
+            </li>
+            <li>
+              <md-button ng-class="{ 'active': isActive('/blog') }" href="#/blog">
+                <span>Blog</span>
+                <span class="md-ripple-container"></span>
+              </md-button>
+            </li>
+            <li>
+              <md-button ng-class="{ 'active': isActive('/gallery') }" href="#/gallery">
+                <span>Gallery</span>
+                <span class="md-ripple-container"></span>
+              </md-button>
+            </li>
+            <li>
+              <md-button ng-class="{ 'active': isActive('/portfolio') }" href="#/portfolio">
+                <span>Portfolio</span>
+                <span class="md-ripple-container"></span>
+              </md-button>
+            </li>
+          </ul>
+        </nav>
+      </md-content>
+    </md-sidenav>
+
+    <div class="content-container">
+      <!-- Site toolbar -->
+      <md-toolbar class="site-toolbar" hide-gt-sm ng-controller="ToolbarCtrl" ng-click="openSiteSidenav()">
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Nav">
+            <md-icon md-svg-icon="/images/menu_24px.svg"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <!-- Site content -->
+      <md-content class="site-content" flex layout-padding>
+        <main layout="column" layout-fill layout-align="top center" ui-view></main>
+      </md-content>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/sidenav.js"></script>
+        <script src="scripts/controllers/toolbar.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

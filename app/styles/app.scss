@@ -1,0 +1,104 @@
+// bower:scss
+// endbower
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+$primary: #C42A37;
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: $primary;
+  font-family: 'Montserrat';
+}
+
+a {
+  color: $primary;
+
+  &:visited {
+    color: lighten($primary, 20%);
+  }
+}
+
+.layout-row {
+  flex-direction: row;
+}
+
+.layout-column {
+  flex-direction: column;
+}
+
+.layout, .layout-column, .layout-row {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.site-sidenav {
+  &.site-sidenav.md-locked-open {
+    width: 275px;
+    min-width: 275px;
+    max-width: 275px;
+  }
+
+  .sidenav-header {
+    .profile-picture {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 7px 0 15px;
+      margin: 0 auto;
+      text-decoration: none;
+
+      > img {
+        width: 95%;
+        height: 100%;
+      }
+
+      > h1 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 32px;
+      }
+    }
+  }
+
+  .sidenav-nav-items {
+    padding: 0;
+    margin: 0;
+
+    > li {
+      .md-button {
+        width: 100%;
+        margin: 0;
+        padding: 7px 0;
+        color: $primary;
+        border-radius: 0;
+
+        &:hover, &.active {
+          background-color: $primary;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.site-content {
+  padding: 15px;
+}
