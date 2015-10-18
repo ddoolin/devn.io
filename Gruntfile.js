@@ -479,7 +479,8 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    // TODO: Fix filerev to also parse HTML
+    // 'filerev',
     'usemin',
     'htmlmin'
   ]);
