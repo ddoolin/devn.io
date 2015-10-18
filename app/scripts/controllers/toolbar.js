@@ -8,7 +8,9 @@
  * Controller of the devnApp
  */
 angular.module('devnApp')
-  .controller('ToolbarCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
+  .controller('ToolbarCtrl', ['$scope', '$mdSidenav', '$state', function ($scope, $mdSidenav, $state) {
+    $scope.$state = $state;
+
     $scope.openSiteSidenav = function () {
       $mdSidenav('left').toggle();
     };
