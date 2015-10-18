@@ -14,7 +14,8 @@ angular
     'ngAria',
     'ngTouch',
     'ngMaterial',
-    'ui.router'
+    'ui.router',
+    'wu.masonry'
   ])
   .config(['$mdThemingProvider', '$stateProvider', '$urlRouterProvider', function ($mdThemingProvider, $stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -29,7 +30,8 @@ angular
       })
       .state('gallery', {
         url: '/gallery',
-        templateUrl: 'views/gallery.html'
+        templateUrl: 'views/gallery.html',
+        controller: 'GalleryCtrl'
       })
       .state('portfolio', {
         url: '/portfolio',

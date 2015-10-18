@@ -9,5 +9,5 @@
  */
 angular.module('devnApp')
   .controller('AboutCtrl', function () {
-    console.log('AboutCtrl');
+    console.debug('AboutCtrl');
   });

@@ -101,4 +101,34 @@ a {
 
 .site-content {
   padding: 15px;
+
+  .gallery-container {
+    .gallery {
+      .picasa-thumbs {
+        ul {
+          list-style: none;
+
+          > li {
+            display: inline-block;
+          }
+        }
+      }
+
+      .masonry-brick {
+        img {
+          max-width: 300px;
+        }
+
+        .caption {
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 10px;
+          padding: 5px 10px;
+          background-color: rgba(0, 0, 0, 0.3);
+          color: white;
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
