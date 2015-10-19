@@ -13,6 +13,7 @@ angular
     'ngAnimate',
     'ngAria',
     'ngTouch',
+    'ngSanitize',
     'ngMaterial',
     'ui.router',
     'wu.masonry'
@@ -30,8 +31,7 @@ angular
       })
       .state('gallery', {
         url: '/gallery',
-        templateUrl: 'views/gallery.html',
-        controller: 'GalleryCtrl'
+        templateUrl: 'views/gallery.html'
       })
       .state('portfolio', {
         url: '/portfolio',
