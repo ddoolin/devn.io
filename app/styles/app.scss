@@ -3,8 +3,17 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+@mixin hover-darken-mixin($color, $amount: 10%) {
+  color: $color;
+
+  &:hover {
+    color: darken($color, $amount);
+  }
+}
+
 $primary: #C42A37;
 $muted: #8A8A8A;
+$body-font-size: 1.6rem;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -17,7 +26,7 @@ body {
   overflow: hidden;
   max-width: 100%;
   max-height: 100%;
-  font-size: 1.6rem;
+  font-size: $body-font-size;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,22 +107,75 @@ a {
       }
     }
   }
+
+  .social-items {
+    margin-top: 10px;
+    text-align: center;
+
+    > a {
+      margin: 0 10px;
+
+      &.github {
+        @include hover-darken-mixin(#333);
+      }
+      &.facebook {
+        @include hover-darken-mixin(#435F9C);
+      }
+      &.twitter {
+        @include hover-darken-mixin(#55ACEE);
+      }
+      &.linkedin {
+        @include hover-darken-mixin(#1A85BC);
+      }
+    }
+  }
+}
+
+.site-toolbar {
+  .nav-path {
+    font-size: $body-font-size;
+  }
+
+  .social-items {
+    width: 80%;
+    text-align: right;
+
+    > a {
+      margin: 0 5px;
+      font-size: $body-font-size;
+      @include hover-darken-mixin(#FFF);
+    }
+  }
 }
 
 .site-content {
   padding: 15px;
 
-  .gallery-container {
-    .gallery {
-      .picasa-thumbs {
-        ul {
-          list-style: none;
+  .blog-container {
+    .posts {
+      margin-top: 30px;
 
-          > li {
-            display: inline-block;
-          }
+      .post {
+        margin: 20px 0;
+
+        .title {
+          margin-bottom: 0;
+          color: black;
+          font-size: 28px;
+        }
+
+        .date {
+          margin: 5px 0 15px 0;
+          color: $muted;
+          font-size: 20px;
         }
       }
+
+      .no-posts {
+        color: $muted;
+      }
+    }
+  }
 
   .gallery-container {
     .gallery {

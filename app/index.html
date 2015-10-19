@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
@@ -56,18 +57,30 @@
               </md-button>
             </li>
           </ul>
+          <div class="social-items">
+            <a class="github" href="https://github.com/ddoolin"><i class="fa fa-github"></i></a>
+            <a class="facebook" href="https://facebook.com/ddoolin"><i class="fa fa-facebook"></i></a>
+            <a class="twitter" href="https://twitter.com/OnEchofon"><i class="fa fa-twitter"></i></a>
+            <a class="linkedin" href=""><i class="fa fa-linkedin"></i></a>
+          </div>
         </nav>
       </md-content>
     </md-sidenav>
 
     <div class="content-container layout-column" flex>
       <!-- Site toolbar -->
-      <md-toolbar class="site-toolbar" hide-gt-sm ng-controller="ToolbarCtrl" ng-click="openSiteSidenav()">
+      <md-toolbar class="site-toolbar" hide-gt-sm ng-controller="ToolbarCtrl">
         <div class="md-toolbar-tools">
-          <md-button class="md-icon-button" aria-label="Nav">
+          <md-button class="md-icon-button" aria-label="Nav" ng-click="openSiteSidenav()">
             <md-icon md-svg-icon="/images/menu_24px.svg"></md-icon>
           </md-button>
-          <div>{{ $state.$current.name | capitalize }}</div>
+          <p class="nav-path">{{ $state.$current.name | capitalize }}</p>
+          <div class="social-items">
+            <a class="github" href="https://github.com/ddoolin"><i class="fa fa-github"></i></a>
+            <a class="facebook" href="https://facebook.com/ddoolin"><i class="fa fa-facebook"></i></a>
+            <a class="twitter" href="https://twitter.com/OnEchofon"><i class="fa fa-twitter"></i></a>
+            <a class="linkedin" href=""><i class="fa fa-linkedin"></i></a>
+          </div>
         </div>
       </md-toolbar>
       <!-- Site content -->
