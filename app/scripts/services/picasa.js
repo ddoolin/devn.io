@@ -2,8 +2,6 @@
 
 angular.module('devnApp')
   .factory('picasaService', ['$http', '$q', function ($http, $q) {
-    $http.defaults.useXDomain = true;
-
     function parsePhoto (entry) {
       var lastThumb = entry.media$group.media$thumbnail.length - 1;
       var photo = {
@@ -45,7 +43,7 @@ angular.module('devnApp')
 
     // Public API here
     return {
-      get : function (url) {
+      get: function (url) {
         return parsePhotos(url);
       }
     };

@@ -1,8 +1,9 @@
-<div masonry column-width="153">
+<div class="photos" masonry column-width="153">
   <div class="masonry-brick" ng-repeat="photo in photos">
     <a href="{{ photo.url }}">
       <img ng-src="{{ photo.url }}">
       <span class="caption">{{ photo.caption }}</span>
     </a>
   </div>
+  <p class="no-photos" ng-show="photos.length < 1">There are no photos to show</p>
 </div>
