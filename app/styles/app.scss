@@ -76,7 +76,7 @@ a {
 
       > img {
         width: 95%;
-        height: 100%;
+        height: auto;
       }
 
       > h1 {
@@ -198,6 +198,12 @@ a {
       .no-photos {
         color: $muted;
       }
+    }
+  }
+
+  .portfolio-container {
+    .no-projects {
+      color: $muted;
     }
   }
 }
