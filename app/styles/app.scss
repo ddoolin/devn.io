@@ -13,7 +13,7 @@
 
 $primary: #C42A37;
 $muted: #8A8A8A;
-$body-font-size: 1.6rem;
+$body-font-size: 1.4rem;
 
 .browsehappy {
   margin: 0.2em 0;
@@ -157,6 +157,7 @@ a {
 
       .post {
         margin: 20px 0;
+        padding: 0 20px;
 
         .title {
           margin-bottom: 0;
@@ -168,6 +169,15 @@ a {
           margin: 5px 0 15px 0;
           color: $muted;
           font-size: 20px;
+        }
+
+        .tr-caption-container > tbody {
+          text-align: center;
+
+          .tr-caption {
+            font-size: 1.2rem;
+            color: $muted;
+          }
         }
       }
 
