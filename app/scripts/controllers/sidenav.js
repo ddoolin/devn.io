@@ -8,8 +8,18 @@
  * Controller of the devnApp
  */
 angular.module('devnApp')
-  .controller('SidenavCtrl', ['$scope', '$location', function ($scope, $location) {
-    $scope.isActive = function (path) {
-      return path === $location.path();
+  .controller('SidenavCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
+    $scope.items = [
+      { name: 'About', state: 'about' },
+      { name: 'Blog', state: 'blog' },
+      { name: 'Gallery', state: 'gallery' },
+      { name: 'Portfolio', state: 'portfolio' }
+    ];
+
+    $scope.goToState = function (evt) {
+      var sidenav = $mdSidenav('left');
+      if (!sidenav.isLockedOpen()) {
+        $mdSidenav('left').toggle();
+      }
     };
   }]);

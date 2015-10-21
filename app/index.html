@@ -33,27 +33,9 @@
       <md-content>
         <nav class="sidenav-nav" ng-controller="SidenavCtrl">
           <ul class="sidenav-nav-items">
-            <li>
-              <md-button ui-sref-active="active" ui-sref="about">
-                <span>About</span>
-                <span class="md-ripple-container"></span>
-              </md-button>
-            </li>
-            <li>
-              <md-button ui-sref-active="active" ui-sref="blog">
-                <span>Blog</span>
-                <span class="md-ripple-container"></span>
-              </md-button>
-            </li>
-            <li>
-              <md-button ui-sref-active="active" ui-sref="gallery">
-                <span>Gallery</span>
-                <span class="md-ripple-container"></span>
-              </md-button>
-            </li>
-            <li>
-              <md-button ui-sref-active="active" ui-sref="portfolio">
-                <span>Portfolio</span>
+            <li ng-repeat="item in items">
+              <md-button ui-sref-active="active" ui-sref="{{ item.state }}" ng-click="goToState($event)">
+                <span>{{ item.name }}</span>
                 <span class="md-ripple-container"></span>
               </md-button>
             </li>
