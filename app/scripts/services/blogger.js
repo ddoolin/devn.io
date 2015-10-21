@@ -29,7 +29,8 @@ angular.module('devnApp')
 
     function loadPosts (opts) {
       var d = $q.defer();
-      var url = opts.url + ('?key=AIzaSyDzOOWnf1WO08LKDtMlSRc_U7HIS2m7deo' +
+      var url = opts.url + (
+        '?key=' + opts.apiKey +
         (opts.maxResults ? '&maxResults=' + opts.maxResults : '') +
         (opts.pageToken ? '&pageToken=' + opts.pageToken : '') +
         (opts.fields ? '&fields=' + encodeURIComponent(opts.fields) : '') +

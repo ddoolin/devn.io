@@ -13,7 +13,8 @@ angular.module('devnApp')
         scope.pageToken = undefined;
 
         scope.$watch('blogger', function () {
-          if (scope.blogger === '') {
+          // Ensure a URL and API key are provided
+          if (scope.blogger === '' || !attrs.apiKey) {
             return;
           }
 
@@ -27,6 +28,7 @@ angular.module('devnApp')
         function getPosts (options) {
           options = angular.extend(options || {}, {
             url: scope.blogger,
+            apiKey: attrs.apiKey,
             maxResults: attrs.maxResults || 10,
             fields: attrs.fields || undefined
           });
