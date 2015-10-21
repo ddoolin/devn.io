@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="devnApp" class="layout-row">
+  <body ng-app="devnApp" layout="row">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Site sidenav -->
-    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left md-whiteframe-z1 site-sidenav">
+    <md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left md-whiteframe-z1 site-sidenav" ng-cloak>
       <header class="sidenav-header">
         <a href="#/" class="profile-picture">
           <img src="/images/profile.jpg">
@@ -50,7 +50,7 @@
       </md-content>
     </md-sidenav>
 
-    <div class="content-container layout-column" flex>
+    <div class="content-container" flex layout="column" ng-cloak>
       <!-- Site toolbar -->
       <md-toolbar class="site-toolbar" hide-gt-sm ng-controller="ToolbarCtrl">
         <div class="md-toolbar-tools">
