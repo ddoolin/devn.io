@@ -34,7 +34,7 @@
         <nav class="sidenav-nav" ng-controller="SidenavCtrl">
           <ul class="sidenav-nav-items">
             <li ng-repeat="item in items">
-              <md-button ui-sref-active="active" ui-sref="{{ item.state }}" ng-click="goToState($event)">
+              <md-button ui-sref-active="active" ui-sref="{{ item.state }}" ng-click="goToState()">
                 <span>{{ item.name }}</span>
                 <span class="md-ripple-container"></span>
               </md-button>

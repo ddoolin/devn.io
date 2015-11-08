@@ -16,7 +16,7 @@ angular.module('devnApp')
       { name: 'Portfolio', state: 'portfolio' }
     ];
 
-    $scope.goToState = function (evt) {
+    $scope.goToState = function () {
       var sidenav = $mdSidenav('left');
       if (!sidenav.isLockedOpen()) {
         $mdSidenav('left').toggle();
